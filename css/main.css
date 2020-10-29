@@ -1291,7 +1291,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #dd2eff;
+  background: #856e01;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2399,11 +2399,11 @@ ul.breadcrumb li + li:last-child {
   padding: 0;
   position: absolute;
   top: 0;
-  width: 240px;
+  width: 250px;
 }
 @media (min-width: 1200px) {
   .header-inner {
-    width: 240px;
+    width: 250px;
   }
 }
 @media (max-width: 991px) {
@@ -2430,7 +2430,7 @@ ul.breadcrumb li + li:last-child {
   box-shadow: initial;
   box-sizing: border-box;
   padding: 40px;
-  width: calc(100% - 252px);
+  width: calc(100% - 262px);
 }
 @media (max-width: 991px) {
   .content-wrap {
@@ -2572,7 +2572,7 @@ ul.breadcrumb li + li:last-child {
   box-shadow: none;
   margin-top: 100%;
   position: static;
-  width: 240px;
+  width: 250px;
 }
 @media (max-width: 991px) {
   .sidebar {
@@ -2588,7 +2588,7 @@ ul.breadcrumb li + li:last-child {
   box-shadow: initial;
   box-sizing: border-box;
   color: var(--text-color);
-  width: 240px;
+  width: 250px;
   opacity: 0;
 }
 .sidebar-inner.affix {
@@ -2668,4 +2668,36 @@ ul.breadcrumb li + li:last-child {
 }
 .links-of-blogroll-item {
   padding: 0;
+}
+body {
+  background: url("/images/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.content-wrap {
+  margin-top: 5px;
+  opacity: 0.9;
+  border-radius: 30px 30px 30px 30px;
+  box-shadow: 8px 7px 2px 0 rgba(0,0,0,0.12), 7px 4px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+}
+.sidebar {
+  opacity: 0.9;
+  border-radius: 30px 30px 30px 30px;
+  box-shadow: 8px 7px 2px 0 rgba(0,0,0,0.12), 7px 4px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+}
+.sidebar-inner {
+  border-radius: 30px 30px 30px 30px;
+  box-shadow: 8px 7px 2px 0 rgba(0,0,0,0.12), 7px 4px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+}
+.header-inner {
+  margin-top: 5px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 30px 30px 30px 30px;
+  box-shadow: 8px 7px 2px 0 rgba(0,0,0,0.12), 7px 4px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+}
+.popup {
+  opacity: 0.9;
+  border-radius: 30px 30px 30px 30px;
 }

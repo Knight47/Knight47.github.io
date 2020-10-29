@@ -25,11 +25,11 @@
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/2020/10/29/3/</url>
+    <url>/2020/10/29/4/</url>
     <content><![CDATA[]]></content>
       <categories>
-        <category>编程</category>
-        <category>前端</category>
+        <category>其他</category>
+        <category>随笔</category>
       </categories>
   </entry>
   <entry>
@@ -43,11 +43,11 @@
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/2020/10/29/4/</url>
+    <url>/2020/10/29/3/</url>
     <content><![CDATA[]]></content>
       <categories>
-        <category>其他</category>
-        <category>随笔</category>
+        <category>编程</category>
+        <category>前端</category>
       </categories>
   </entry>
 </search>

@@ -3,7 +3,9 @@
   <entry>
     <title>web安全</title>
     <url>/2020/10/29/aq-web-1/</url>
-    <content><![CDATA[<a id="more"></a>]]></content>
+    <content><![CDATA[<a id="more"></a>
+<p>1</p>
+]]></content>
       <categories>
         <category>安全</category>
         <category>Web</category>
@@ -12,7 +14,9 @@
   <entry>
     <title>后端</title>
     <url>/2020/10/29/bc-hd-2/</url>
-    <content><![CDATA[<a id="more"></a>]]></content>
+    <content><![CDATA[<a id="more"></a>
+<p>1</p>
+]]></content>
       <categories>
         <category>编程</category>
         <category>后端</category>

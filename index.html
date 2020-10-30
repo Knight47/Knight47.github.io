@@ -186,7 +186,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://khaos.fun/2020/10/29/aq-web-1/">
+    <link itemprop="mainEntityOfPage" href="https://khaos.fun/2020/10/30/aq-web-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -200,7 +200,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/10/29/aq-web-1/" class="post-title-link" itemprop="url">web安全</a>
+            <a href="/2020/10/30/aq-web-1/" class="post-title-link" itemprop="url">web安全</a>
         </h2>
 
         <div class="post-meta">
@@ -211,7 +211,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-10-29 12:02:00 / 修改时间：16:55:40" itemprop="dateCreated datePublished" datetime="2020-10-29T12:02:00+08:00">2020-10-29</time>
+              <time title="创建时间：2020-10-30 12:02:00 / 修改时间：13:16:56" itemprop="dateCreated datePublished" datetime="2020-10-30T12:02:00+08:00">2020-10-30</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -238,10 +238,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+          <h1 id="网络信息安全攻防学习平台的write-up"><a href="#网络信息安全攻防学习平台的write-up" class="headerlink" title="网络信息安全攻防学习平台的write up"></a>网络信息安全攻防学习平台的write up</h1>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/10/29/aq-web-1/#more" rel="contents">
+              <a class="btn" href="/2020/10/30/aq-web-1/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -296,7 +296,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-10-30 11:31:44" itemprop="dateModified" datetime="2020-10-30T11:31:44+08:00">2020-10-30</time>
+                <time title="修改时间：2020-10-30 13:10:45" itemprop="dateModified" datetime="2020-10-30T13:10:45+08:00">2020-10-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -324,17 +324,6 @@
 
       
           <h1 id="全排序"><a href="#全排序" class="headerlink" title="全排序"></a>全排序</h1><p>全排列可以说是最基本的部分了，不过实现的过程还是很有必要学习的，可以说难者不会，会者不难。</p>
-<p>大体思路如下：</p>
-<p>第一步：从n个数中选取第一个排列的第一个元素，如1；</p>
-<p>第一步：从n个数中选取第一个排列的第二个元素，如2；</p>
-<p>……</p>
-<p>第n步：从n个数中选取第一个排列的第n个元素，如n；</p>
-<p>当然不能选重复的。到此，第一个排列已经选出来了。那么第二个排列怎么选呢，其实很简单。</p>
-<p>上一个排列执行到第n步后，这个函数不再执行，进行回溯，那么就会回到第n-1步，这时前面的n-1</p>
-<p>个数都已经选过了，所以第n-1步选择的就会是n了，然后第n步选择的就是n-1；</p>
-<p>所以第一个排列是：1 2 3 。。。n-1 n；</p>
-<p>第二个是：1 2 3 。。。n n-1；</p>
-<p>以此类推就会输出所有的排列，代码如下。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/10/29/bc-hd-1/#more" rel="contents">

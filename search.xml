@@ -3,7 +3,8 @@
   <entry>
     <title>web安全</title>
     <url>/2020/10/30/aq-web-1/</url>
-    <content><![CDATA[<h1 id="网络信息安全攻防学习平台的write-up"><a href="#网络信息安全攻防学习平台的write-up" class="headerlink" title="网络信息安全攻防学习平台的write up"></a>网络信息安全攻防学习平台的write up</h1><a id="more"></a>
+    <content><![CDATA[<p>网络信息安全攻防学习平台的write up</p>
+<a id="more"></a>
 
 <p>选择关：<br><a href="https://blog.csdn.net/baigoocn/article/details/51447705">https://blog.csdn.net/baigoocn/article/details/51447705</a></p>
 <p>基本关：<br><a href="https://www.jianshu.com/p/1f51c3bd2f69?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">https://www.jianshu.com/p/1f51c3bd2f69?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation</a></p>
@@ -21,7 +22,7 @@
   <entry>
     <title>全排序回溯</title>
     <url>/2020/10/29/bc-hd-1/</url>
-    <content><![CDATA[<h1 id="全排序"><a href="#全排序" class="headerlink" title="全排序"></a>全排序</h1><p>全排列可以说是最基本的部分了，不过实现的过程还是很有必要学习的，可以说难者不会，会者不难。</p>
+    <content><![CDATA[<p>全排列可以说是最基本的部分了，不过实现的过程还是很有必要学习的，可以说难者不会，会者不难。</p>
 <a id="more"></a>
 <p>大体思路如下：</p>
 <p>第一步：从n个数中选取第一个排列的第一个元素，如1；</p>
@@ -87,15 +88,16 @@
   <entry>
     <title>博客教程</title>
     <url>/2020/10/29/bc-qd-2/</url>
-    <content><![CDATA[<h1 id="安装hexo博客教程"><a href="#安装hexo博客教程" class="headerlink" title="安装hexo博客教程"></a>安装hexo博客教程</h1><p>一般我们要搭建一个个人的博客站点需要买服务器、域名，装各种运行环境等等，非常的费钱费力。</p>
+    <content><![CDATA[<p>安装hexo博客教程<br>一般我们要搭建一个个人的博客站点需要买服务器、域名，装各种运行环境等等，非常的费钱费力。</p>
 <p>其实就算没有这些，我们也是照样可以通过Hexo框架结合GitHub Pages搭建一个自己的博客站点的。</p>
 <a id="more"></a>
-<p>Hexo 这个博客框架没有那么重量级，它是 MarkDown 直接写文章的，然后 Hexo 可以直接将文章编译成静态网页文件并发布，所以这样文章的内容、标题、标签等信息就没必要存数据库里面了，是直接纯静态页面了，这就解决了数据库的问题。</p>
+
+<p>#Hexo<br>这个博客框架没有那么重量级，它是 MarkDown 直接写文章的，然后 Hexo 可以直接将文章编译成静态网页文件并发布，所以这样文章的内容、标题、标签等信息就没必要存数据库里面了，是直接纯静态页面了，这就解决了数据库的问题。</p>
 <h1 id="GitHub账号"><a href="#GitHub账号" class="headerlink" title="GitHub账号"></a>GitHub账号</h1><p>域名(可选)<br>首先在 GitHub 新建一个仓库（Repository），名称为 {username}.github.io，注意这个名比较特殊，必须要是 github.io 为后缀结尾的。比如我的用户名是Khaos，那么就新建一个Khaos.github.io的仓库。</p>
 <h1 id="SSH-Key密钥"><a href="#SSH-Key密钥" class="headerlink" title="SSH-Key密钥"></a>SSH-Key密钥</h1><p>因为后期我们更新文章或者提交代码需要有相应的权限才可以，通过用户名和密码不方便且不安全，所以非常有必要配置SSH-Key密钥。</p>
 <p>cd ~/. ssh<br>ssh-keygen -t rsa -C “邮件地址”</p>
 <p>然后连续3次回车，最终会生成一个文件在用户目录下，打开用户目录，找到.ssh\id_rsa.pub文件，记事本打开并复制里面的内容，打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key：</p>
-<p>ssh -T <a href="mailto:&#x67;&#x69;&#x74;&#x40;&#103;&#x69;&#x74;&#x68;&#x75;&#x62;&#x2e;&#99;&#111;&#109;">&#x67;&#x69;&#x74;&#x40;&#103;&#x69;&#x74;&#x68;&#x75;&#x62;&#x2e;&#99;&#111;&#109;</a><br>git config –global user.name “Khaos”<br>git config –global user.email  “<a href="mailto:&#75;&#104;&#97;&#111;&#115;&#64;&#103;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;">&#75;&#104;&#97;&#111;&#115;&#64;&#103;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;</a>“</p>
+<p>ssh -T <a href="mailto:&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#x68;&#117;&#x62;&#46;&#99;&#111;&#109;">&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#x68;&#117;&#x62;&#46;&#99;&#111;&#109;</a><br>git config –global user.name “Khaos”<br>git config –global user.email  “<a href="mailto:&#75;&#104;&#x61;&#x6f;&#x73;&#64;&#103;&#109;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;">&#75;&#104;&#x61;&#x6f;&#x73;&#64;&#103;&#109;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;</a>“</p>
 <h1 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h1><p>首先在自己的电脑上安装 Node.js，下载地址：<a href="https://nodejs.org/zh-cn/download/%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%AE%89%E8%A3%85">https://nodejs.org/zh-cn/download/，可以安装</a> Stable 版本。</p>
 <p>安装完毕之后，确保环境变量配置好，能正常使用 npm 命令。</p>
 <p>npm –version</p>

@@ -28,7 +28,7 @@
 <meta property="og:description" content="安装hexo博客教程一般我们要搭建一个个人的博客站点需要买服务器、域名，装各种运行环境等等，非常的费钱费力。 其实就算没有这些，我们也是照样可以通过Hexo框架结合GitHub Pages搭建一个自己的博客站点的。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-10-29T04:00:30.000Z">
-<meta property="article:modified_time" content="2020-10-29T11:18:54.671Z">
+<meta property="article:modified_time" content="2020-11-01T07:38:41.429Z">
 <meta property="article:author" content="Khaos">
 <meta property="article:tag" content="编程, 网络, 技术, ...">
 <meta name="twitter:card" content="summary">
@@ -211,10 +211,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-10-29 12:00:30 / 修改时间：19:18:54" itemprop="dateCreated datePublished" datetime="2020-10-29T12:00:30+08:00">2020-10-29</time>
+              <time title="创建时间：2020-10-29 12:00:30" itemprop="dateCreated datePublished" datetime="2020-10-29T12:00:30+08:00">2020-10-29</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-01 15:38:41" itemprop="dateModified" datetime="2020-11-01T15:38:41+08:00">2020-11-01</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -247,15 +253,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="安装hexo博客教程"><a href="#安装hexo博客教程" class="headerlink" title="安装hexo博客教程"></a>安装hexo博客教程</h1><p>一般我们要搭建一个个人的博客站点需要买服务器、域名，装各种运行环境等等，非常的费钱费力。</p>
+        <p>安装hexo博客教程<br>一般我们要搭建一个个人的博客站点需要买服务器、域名，装各种运行环境等等，非常的费钱费力。</p>
 <p>其实就算没有这些，我们也是照样可以通过Hexo框架结合GitHub Pages搭建一个自己的博客站点的。</p>
 <a id="more"></a>
-<p>Hexo 这个博客框架没有那么重量级，它是 MarkDown 直接写文章的，然后 Hexo 可以直接将文章编译成静态网页文件并发布，所以这样文章的内容、标题、标签等信息就没必要存数据库里面了，是直接纯静态页面了，这就解决了数据库的问题。</p>
+
+<p>#Hexo<br>这个博客框架没有那么重量级，它是 MarkDown 直接写文章的，然后 Hexo 可以直接将文章编译成静态网页文件并发布，所以这样文章的内容、标题、标签等信息就没必要存数据库里面了，是直接纯静态页面了，这就解决了数据库的问题。</p>
 <h1 id="GitHub账号"><a href="#GitHub账号" class="headerlink" title="GitHub账号"></a>GitHub账号</h1><p>域名(可选)<br>首先在 GitHub 新建一个仓库（Repository），名称为 {username}.github.io，注意这个名比较特殊，必须要是 github.io 为后缀结尾的。比如我的用户名是Khaos，那么就新建一个Khaos.github.io的仓库。</p>
 <h1 id="SSH-Key密钥"><a href="#SSH-Key密钥" class="headerlink" title="SSH-Key密钥"></a>SSH-Key密钥</h1><p>因为后期我们更新文章或者提交代码需要有相应的权限才可以，通过用户名和密码不方便且不安全，所以非常有必要配置SSH-Key密钥。</p>
 <p>cd ~/. ssh<br>ssh-keygen -t rsa -C “邮件地址”</p>
 <p>然后连续3次回车，最终会生成一个文件在用户目录下，打开用户目录，找到.ssh\id_rsa.pub文件，记事本打开并复制里面的内容，打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key：</p>
-<p>ssh -T <a href="mailto:&#x67;&#x69;&#x74;&#x40;&#103;&#x69;&#x74;&#x68;&#x75;&#x62;&#x2e;&#99;&#111;&#109;">&#x67;&#x69;&#x74;&#x40;&#103;&#x69;&#x74;&#x68;&#x75;&#x62;&#x2e;&#99;&#111;&#109;</a><br>git config –global user.name “Khaos”<br>git config –global user.email  “<a href="mailto:&#75;&#104;&#97;&#111;&#115;&#64;&#103;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;">&#75;&#104;&#97;&#111;&#115;&#64;&#103;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;</a>“</p>
+<p>ssh -T <a href="mailto:&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#x68;&#117;&#x62;&#46;&#99;&#111;&#109;">&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#x68;&#117;&#x62;&#46;&#99;&#111;&#109;</a><br>git config –global user.name “Khaos”<br>git config –global user.email  “<a href="mailto:&#75;&#104;&#x61;&#x6f;&#x73;&#64;&#103;&#109;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;">&#75;&#104;&#x61;&#x6f;&#x73;&#64;&#103;&#109;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;</a>“</p>
 <h1 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h1><p>首先在自己的电脑上安装 Node.js，下载地址：<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/download/%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%AE%89%E8%A3%85">https://nodejs.org/zh-cn/download/，可以安装</a> Stable 版本。</p>
 <p>安装完毕之后，确保环境变量配置好，能正常使用 npm 命令。</p>
 <p>npm –version</p>
@@ -471,7 +478,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85hexo%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">安装hexo博客教程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GitHub%E8%B4%A6%E5%8F%B7"><span class="nav-number">2.</span> <span class="nav-text">GitHub账号</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SSH-Key%E5%AF%86%E9%92%A5"><span class="nav-number">3.</span> <span class="nav-text">SSH-Key密钥</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Node-js"><span class="nav-number">4.</span> <span class="nav-text">Node.js</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo"><span class="nav-number">5.</span> <span class="nav-text">Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-number">6.</span> <span class="nav-text">配置</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#GitHub%E8%B4%A6%E5%8F%B7"><span class="nav-number">1.</span> <span class="nav-text">GitHub账号</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SSH-Key%E5%AF%86%E9%92%A5"><span class="nav-number">2.</span> <span class="nav-text">SSH-Key密钥</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Node-js"><span class="nav-number">3.</span> <span class="nav-text">Node.js</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo"><span class="nav-number">4.</span> <span class="nav-text">Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-number">5.</span> <span class="nav-text">配置</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

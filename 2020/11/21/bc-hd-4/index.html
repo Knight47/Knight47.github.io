@@ -20,18 +20,20 @@
     var CONFIG = {"hostname":"khaos.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":250,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":5,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="记录学习、工作和生活中的各种问题 QQ992308975 Q群656967962">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Khaos的个人博客">
-<meta property="og:url" content="https://khaos.fun/categories/%E7%BC%96%E7%A8%8B/index.html">
+  <meta name="description" content="1.原题你将会获得一系列视频片段，这些片段来自于一项持续时长为 T 秒的体育赛事。这些片段可能有所重叠，也可能长度不一。 视频片段 clips[i] 都用区间进行表示：开始于 clips[i][0] 并于 clips[i][1]结束。我们甚至可以对这些片段自由地再剪辑，例如片段 [0, 7]可以剪切成 [0, 1] + [1, 3] + [3, 7]三部分。我们需要将这些片段进行再剪辑，并将剪辑后">
+<meta property="og:type" content="article">
+<meta property="og:title" content="动态规划：视频剪辑">
+<meta property="og:url" content="https://khaos.fun/2020/11/21/bc-hd-4/index.html">
 <meta property="og:site_name" content="Khaos的个人博客">
-<meta property="og:description" content="记录学习、工作和生活中的各种问题 QQ992308975 Q群656967962">
+<meta property="og:description" content="1.原题你将会获得一系列视频片段，这些片段来自于一项持续时长为 T 秒的体育赛事。这些片段可能有所重叠，也可能长度不一。 视频片段 clips[i] 都用区间进行表示：开始于 clips[i][0] 并于 clips[i][1]结束。我们甚至可以对这些片段自由地再剪辑，例如片段 [0, 7]可以剪切成 [0, 1] + [1, 3] + [3, 7]三部分。我们需要将这些片段进行再剪辑，并将剪辑后">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-11-21T03:08:24.000Z">
+<meta property="article:modified_time" content="2020-11-21T02:54:55.300Z">
 <meta property="article:author" content="Khaos">
 <meta property="article:tag" content="编程, 网络, 技术, ...">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://khaos.fun/categories/%E7%BC%96%E7%A8%8B/">
+<link rel="canonical" href="https://khaos.fun/2020/11/21/bc-hd-4/">
 
 
 <script id="page-configurations">
@@ -39,12 +41,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>分类: 编程 | Khaos的个人博客</title>
+  <title>动态规划：视频剪辑 | Khaos的个人博客</title>
   
 
 
@@ -180,157 +182,122 @@
         <div class="content-wrap">
           
 
-          <div class="content category">
+          <div class="content post posts-expand">
             
 
+    
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://khaos.fun/2020/11/21/bc-hd-4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Khaos">
+      <meta itemprop="description" content="记录学习、工作和生活中的各种问题 QQ992308975 Q群656967962">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Khaos的个人博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          动态规划：视频剪辑
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-11-21 11:08:24 / 修改时间：10:54:55" itemprop="dateCreated datePublished" datetime="2020-11-21T11:08:24+08:00">2020-11-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">编程</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BC%96%E7%A8%8B/%E5%90%8E%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">编程
-          <small>分类</small>
-        </h2>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/11/21/bc-hd-4/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/11/21/bc-hd-4/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
+        <h2 id="1-原题"><a href="#1-原题" class="headerlink" title="1.原题"></a>1.原题</h2><p>你将会获得一系列视频片段，这些片段来自于一项持续时长为 T 秒的体育赛事。这些片段可能有所重叠，也可能长度不一。</p>
+<p>视频片段 clips[i] 都用区间进行表示：开始于 clips[i][0] 并于 clips[i][1]结束。我们甚至可以对这些片段自由地再剪辑，例如片段 [0, 7]可以剪切成 [0, 1] + [1, 3] + [3, 7]三部分。<br>我们需要将这些片段进行再剪辑，并将剪辑后的内容拼接成覆盖整个运动过程的片段（[0, T]）。返回所需片段的最小数目，如果无法完成该任务，则返回 -1 。</p>
+<p>示例 1：<br>    输入：clips = [[0,2],[4,6],[8,10],[1,9],[1,5],[5,9]], T = 10<br>    输出：3<br>    解释：<br>    我们选中 [0,2], [8,10], [1,9] 这三个片段。<br>    然后，按下面的方案重制比赛片段：<br>    将 [1,9] 再剪辑为 [1,2] + [2,8] + [8,9] 。<br>    现在我们手上有 [0,2] + [2,8] + [8,10]，而这些涵盖了整场比赛 [0, 10]。</p>
+<p>示例 2：<br>    输入：clips = [[0,1],[1,2]], T = 5<br>    输出：-1<br>    解释：<br>    我们无法只用 [0,1] 和 [1,2] 覆盖 [0,5] 的整个过程。</p>
+<h2 id="2-讲解"><a href="#2-讲解" class="headerlink" title="2. 讲解"></a>2. 讲解</h2><p> 用dp[i]代表从0到时刻i最小片段个数；记录时刻 i-1 能表示的最大时刻maxRight；<br> 如果 时刻 i-1 能表示时刻i，dp[i]= dp[i-1]，否则，查找能表示时刻i的片段，dp[i] = dp[i-1] +1;<br> 第一个循环依次从0到T的过程代表时间。<br> 第二个循环判断每个分段点在clips数组中每个时间段是否存在。<br> 如果找到则found变true。result+1，最终输出result得出结果。</p>
+<h2 id="3-代码"><a href="#3-代码" class="headerlink" title="3. 代码"></a>3. 代码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int videoStitching(int[][] clips, int T) &#123;</span><br><span class="line">        int maxRight = -1;</span><br><span class="line">        int result = 0;</span><br><span class="line">        <span class="keyword">for</span>(int i = 1; i&lt;= T; i++)&#123;            </span><br><span class="line">            boolean found = <span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">if</span>(maxRight&gt;= i)&#123;</span><br><span class="line">                found = <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">for</span>(int j = 0; j&lt;clips.length; j ++)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(i-1&gt;= clips[j][0] &amp;&amp; i&lt;= clips[j][1])&#123;</span><br><span class="line">                        found = <span class="literal">true</span>;</span><br><span class="line">                        maxRight = Math.max(maxRight, clips[j][1]);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(found)&#123;</span><br><span class="line">                    result++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    result= -1;</span><br><span class="line">                    <span class="built_in">break</span>;</span><br><span class="line">                &#125; </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-11-21T11:08:24+08:00"
-              content="2020-11-21">
-          11-21
-        </time>
-      </div>
+      <footer class="post-footer">
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/11/21/bc-hd-4/" itemprop="url">
-            <span itemprop="name">动态规划：视频剪辑</span>
-          </a>
-      </div>
+        
 
-    </header>
-  </article>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-11-19T10:41:22+08:00"
-              content="2020-11-19">
-          11-19
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/11/19/bc-hd-3/" itemprop="url">
-            <span itemprop="name">动态规划：给你一个整数数组 nums，请你找出并返回能被三整除的元素最大和。</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-11-01T12:01:00+08:00"
-              content="2020-11-01">
-          11-01
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/11/01/bc-hd-2/" itemprop="url">
-            <span itemprop="name">皇后问题</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-10-29T12:01:00+08:00"
-              content="2020-10-29">
-          10-29
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/29/bc-hd-1/" itemprop="url">
-            <span itemprop="name">全排序回溯</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-10-29T12:00:30+08:00"
-              content="2020-10-29">
-          10-29
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/29/bc-qd-2/" itemprop="url">
-            <span itemprop="name">博客教程</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-10-29T12:00:00+08:00"
-              content="2020-10-29">
-          10-29
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/29/bc-qd-1/" itemprop="url">
-            <span itemprop="name">博客模板示例</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/11/19/bc-hd-3/" rel="prev" title="动态规划：给你一个整数数组 nums，请你找出并返回能被三整除的元素最大和。">
+      <i class="fa fa-chevron-left"></i> 动态规划：给你一个整数数组 nums，请你找出并返回能被三整除的元素最大和。
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-  </div>
+      </footer>
+    
+  </article>
   
   
-  
-
   
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -377,6 +344,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%8E%9F%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">1.原题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E8%AE%B2%E8%A7%A3"><span class="nav-number">2.</span> <span class="nav-text">2. 讲解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E4%BB%A3%E7%A0%81"><span class="nav-number">3.</span> <span class="nav-text">3. 代码</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

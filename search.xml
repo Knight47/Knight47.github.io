@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>动态规划</title>
-    <url>/2020/11/19/bc-hd-3/</url>
-    <content><![CDATA[<p>给你一个整数数组 nums，请你找出并返回能被三整除的元素最大和。<br>示例 1：<br>输入： nums = [3,6,5,1,8]<br>输出： 18<br>解释：选出数字 3, 6, 1 和 8，它们的和是 18（可被 3 整除的最大和）。</p>
-<a id="more"></a>
-<p>本次代码我们使用的是java语言，这单纯是我对这个代码的理解。<br>有所不同，希望能够给我反馈。</p>
-<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>dp数组将num[i]%3的三种情况分类。<br>dp[0]是余0的结果。<br>dp[1]是寄存上个dp[0]余1加上的结果。<br>dp[2]是寄存上个dp[0]加上余2的结果。<br>k是每个num数组中元素的除3的余数。</p>
-<h1 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h1><p>在每次循环中，dp[0]会加除3余0的元素<br>如果在出现一个余1或2的x元素后<br>通过a,b,c的调换<br>再次出现一个余3-x的元素。<br>则会将两者相加，同时加上前一遍已经余3为0的总数。通过比较这个相加的值与原本dp[x]的值取最大值。</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">package guygfxc;</span><br><span class="line">public class Main &#123;</span><br><span class="line">	public static int maxSumDivThree(int[] nums) &#123;</span><br><span class="line">        int[] dp = new int[]&#123;0,0,0&#125;;</span><br><span class="line">        <span class="keyword">for</span>(int i=0;i&lt;nums.length;i++)&#123;</span><br><span class="line">            int k = nums[i]%3;</span><br><span class="line">            // 找到与k对应的dp[i]的i值，因为每一次添加一个数字，三个dp值都要更新</span><br><span class="line">            int a = dp[(3 + 0 - k) % 3];// (a+k)%3=0 ==&gt; (a+num[i])%3=0</span><br><span class="line">            int b = dp[(3 + 1 - k) % 3];// (b+k)%3=1 ==&gt; (b+num[i])%3=1</span><br><span class="line">            int c = dp[(3 + 2 - k) % 3];// (c+k)%3=2 ==&gt; (c+num[i])%3=2</span><br><span class="line">            <span class="keyword">if</span>(a!=0 || k==0) &#123;</span><br><span class="line">                dp[0] = Math.max(dp[0]，a+nums[i]);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(b!=0 || k==1)&#123;</span><br><span class="line">                dp[1] = Math.max(dp[1]，b+nums[i]);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(c!=0 || k==2)&#123;</span><br><span class="line">                dp[2] = Math.max(dp[2]，c+nums[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">return</span> dp[0];</span><br><span class="line">    &#125;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		// TODO Auto-generated method stub</span><br><span class="line">		int [] nums = &#123;3,6,5,1,8&#125;;</span><br><span class="line">		System.out.println(maxSumDivThree(nums));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>编程</category>
-        <category>后端</category>
-      </categories>
-  </entry>
-  <entry>
     <title>皇后问题</title>
     <url>/2020/11/01/bc-hd-2/</url>
     <content><![CDATA[<p>皇后问题即任意两个皇后都不能处于同一行、同一列或同一斜线上，问有多少种摆法。<br>计算机发明后，有多种计算机语言可以编程解决此问题。</p>
@@ -30,22 +16,17 @@
       </categories>
   </entry>
   <entry>
-    <title>web安全</title>
-    <url>/2020/10/30/aq-web-1/</url>
-    <content><![CDATA[<p>网络信息安全攻防学习平台的write up</p>
+    <title>动态规划：给你一个整数数组 nums，请你找出并返回能被三整除的元素最大和。</title>
+    <url>/2020/11/19/bc-hd-3/</url>
+    <content><![CDATA[<h1 id="原题"><a href="#原题" class="headerlink" title="原题"></a>原题</h1><p>给你一个整数数组 nums，请你找出并返回能被三整除的元素最大和。<br>示例 1：<br>输入： nums = [3,6,5,1,8]<br>输出： 18<br>解释：选出数字 3, 6, 1 和 8，它们的和是 18（可被 3 整除的最大和）。</p>
 <a id="more"></a>
-
-<p>选择关：<br><a href="https://blog.csdn.net/baigoocn/article/details/51447705">https://blog.csdn.net/baigoocn/article/details/51447705</a></p>
-<p>基本关：<br><a href="https://www.jianshu.com/p/1f51c3bd2f69?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">https://www.jianshu.com/p/1f51c3bd2f69?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation</a></p>
-<p>脚本关：<br><a href="https://blog.csdn.net/qq_31481187/article/details/52559718">https://blog.csdn.net/qq_31481187/article/details/52559718</a></p>
-<p>注入关：<br><a href="https://blog.csdn.net/weixin_41924764/article/details/107095963">https://blog.csdn.net/weixin_41924764/article/details/107095963</a></p>
-<p>上传关、解密关：<a href="https://blog.csdn.net/weixin_41924764/article/details/107667134">https://blog.csdn.net/weixin_41924764/article/details/107667134</a></p>
-<p>综合关：<br><a href="http://cn-sec.com/archives/50425.html">http://cn-sec.com/archives/50425.html</a></p>
-<p>创新关：<br>暂无</p>
-]]></content>
+<p>本次代码我们使用的是java语言，这单纯是我对这个代码的理解。<br>有所不同，希望能够给我反馈。</p>
+<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>dp数组将num[i]%3的三种情况分类。<br>dp[0]是余0的结果。<br>dp[1]是寄存上个dp[0]余1加上的结果。<br>dp[2]是寄存上个dp[0]加上余2的结果。<br>k是每个num数组中元素的除3的余数。</p>
+<h1 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h1><p>在每次循环中，dp[0]会加除3余0的元素<br>如果在出现一个余1或2的x元素后<br>通过a,b,c的调换<br>再次出现一个余3-x的元素。<br>则会将两者相加，同时加上前一遍已经余3为0的总数。通过比较这个相加的值与原本dp[x]的值取最大值。</p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">package guygfxc;</span><br><span class="line">public class Main &#123;</span><br><span class="line">	public static int maxSumDivThree(int[] nums) &#123;</span><br><span class="line">        int[] dp = new int[]&#123;0,0,0&#125;;</span><br><span class="line">        <span class="keyword">for</span>(int i=0;i&lt;nums.length;i++)&#123;</span><br><span class="line">            int k = nums[i]%3;</span><br><span class="line">            // 找到与k对应的dp[i]的i值，因为每一次添加一个数字，三个dp值都要更新</span><br><span class="line">            int a = dp[(3 + 0 - k) % 3];// (a+k)%3=0 ==&gt; (a+num[i])%3=0</span><br><span class="line">            int b = dp[(3 + 1 - k) % 3];// (b+k)%3=1 ==&gt; (b+num[i])%3=1</span><br><span class="line">            int c = dp[(3 + 2 - k) % 3];// (c+k)%3=2 ==&gt; (c+num[i])%3=2</span><br><span class="line">            <span class="keyword">if</span>(a!=0 || k==0) &#123;</span><br><span class="line">                dp[0] = Math.max(dp[0]，a+nums[i]);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(b!=0 || k==1)&#123;</span><br><span class="line">                dp[1] = Math.max(dp[1]，b+nums[i]);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(c!=0 || k==2)&#123;</span><br><span class="line">                dp[2] = Math.max(dp[2]，c+nums[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">return</span> dp[0];</span><br><span class="line">    &#125;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		// TODO Auto-generated method stub</span><br><span class="line">		int [] nums = &#123;3,6,5,1,8&#125;;</span><br><span class="line">		System.out.println(maxSumDivThree(nums));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>安全</category>
-        <category>Web</category>
+        <category>编程</category>
+        <category>后端</category>
       </categories>
   </entry>
   <entry>
@@ -100,6 +81,39 @@
       </categories>
   </entry>
   <entry>
+    <title>动态规划：视频剪辑</title>
+    <url>/2020/11/21/bc-hd-4/</url>
+    <content><![CDATA[<h2 id="1-原题"><a href="#1-原题" class="headerlink" title="1.原题"></a>1.原题</h2><p>你将会获得一系列视频片段，这些片段来自于一项持续时长为 T 秒的体育赛事。这些片段可能有所重叠，也可能长度不一。</p>
+<p>视频片段 clips[i] 都用区间进行表示：开始于 clips[i][0] 并于 clips[i][1]结束。我们甚至可以对这些片段自由地再剪辑，例如片段 [0, 7]可以剪切成 [0, 1] + [1, 3] + [3, 7]三部分。<br>我们需要将这些片段进行再剪辑，并将剪辑后的内容拼接成覆盖整个运动过程的片段（[0, T]）。返回所需片段的最小数目，如果无法完成该任务，则返回 -1 。</p>
+<p>示例 1：<br>    输入：clips = [[0,2],[4,6],[8,10],[1,9],[1,5],[5,9]], T = 10<br>    输出：3<br>    解释：<br>    我们选中 [0,2], [8,10], [1,9] 这三个片段。<br>    然后，按下面的方案重制比赛片段：<br>    将 [1,9] 再剪辑为 [1,2] + [2,8] + [8,9] 。<br>    现在我们手上有 [0,2] + [2,8] + [8,10]，而这些涵盖了整场比赛 [0, 10]。</p>
+<p>示例 2：<br>    输入：clips = [[0,1],[1,2]], T = 5<br>    输出：-1<br>    解释：<br>    我们无法只用 [0,1] 和 [1,2] 覆盖 [0,5] 的整个过程。</p>
+<h2 id="2-讲解"><a href="#2-讲解" class="headerlink" title="2. 讲解"></a>2. 讲解</h2><p> 用dp[i]代表从0到时刻i最小片段个数；记录时刻 i-1 能表示的最大时刻maxRight；<br> 如果 时刻 i-1 能表示时刻i，dp[i]= dp[i-1]，否则，查找能表示时刻i的片段，dp[i] = dp[i-1] +1;<br> 第一个循环依次从0到T的过程代表时间。<br> 第二个循环判断每个分段点在clips数组中每个时间段是否存在。<br> 如果找到则found变true。result+1，最终输出result得出结果。</p>
+<h2 id="3-代码"><a href="#3-代码" class="headerlink" title="3. 代码"></a>3. 代码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int videoStitching(int[][] clips, int T) &#123;</span><br><span class="line">        int maxRight = -1;</span><br><span class="line">        int result = 0;</span><br><span class="line">        <span class="keyword">for</span>(int i = 1; i&lt;= T; i++)&#123;            </span><br><span class="line">            boolean found = <span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">if</span>(maxRight&gt;= i)&#123;</span><br><span class="line">                found = <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">for</span>(int j = 0; j&lt;clips.length; j ++)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(i-1&gt;= clips[j][0] &amp;&amp; i&lt;= clips[j][1])&#123;</span><br><span class="line">                        found = <span class="literal">true</span>;</span><br><span class="line">                        maxRight = Math.max(maxRight, clips[j][1]);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(found)&#123;</span><br><span class="line">                    result++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    result= -1;</span><br><span class="line">                    <span class="built_in">break</span>;</span><br><span class="line">                &#125; </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>编程</category>
+        <category>后端</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>web安全</title>
+    <url>/2020/10/30/aq-web-1/</url>
+    <content><![CDATA[<p>网络信息安全攻防学习平台的write up</p>
+<a id="more"></a>
+
+<p>选择关：<br><a href="https://blog.csdn.net/baigoocn/article/details/51447705">https://blog.csdn.net/baigoocn/article/details/51447705</a></p>
+<p>基本关：<br><a href="https://www.jianshu.com/p/1f51c3bd2f69?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">https://www.jianshu.com/p/1f51c3bd2f69?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation</a></p>
+<p>脚本关：<br><a href="https://blog.csdn.net/qq_31481187/article/details/52559718">https://blog.csdn.net/qq_31481187/article/details/52559718</a></p>
+<p>注入关：<br><a href="https://blog.csdn.net/weixin_41924764/article/details/107095963">https://blog.csdn.net/weixin_41924764/article/details/107095963</a></p>
+<p>上传关、解密关：<a href="https://blog.csdn.net/weixin_41924764/article/details/107667134">https://blog.csdn.net/weixin_41924764/article/details/107667134</a></p>
+<p>综合关：<br><a href="http://cn-sec.com/archives/50425.html">http://cn-sec.com/archives/50425.html</a></p>
+<p>创新关：<br>暂无</p>
+]]></content>
+      <categories>
+        <category>安全</category>
+        <category>Web</category>
+      </categories>
+  </entry>
+  <entry>
     <title>博客教程</title>
     <url>/2020/10/29/bc-qd-2/</url>
     <content><![CDATA[<p>安装hexo博客教程<br>一般我们要搭建一个个人的博客站点需要买服务器、域名，装各种运行环境等等，非常的费钱费力。</p>
@@ -111,7 +125,7 @@
 <h1 id="SSH-Key密钥"><a href="#SSH-Key密钥" class="headerlink" title="SSH-Key密钥"></a>SSH-Key密钥</h1><p>因为后期我们更新文章或者提交代码需要有相应的权限才可以，通过用户名和密码不方便且不安全，所以非常有必要配置SSH-Key密钥。</p>
 <p>cd ~/. ssh<br>ssh-keygen -t rsa -C “邮件地址”</p>
 <p>然后连续3次回车，最终会生成一个文件在用户目录下，打开用户目录，找到.ssh\id_rsa.pub文件，记事本打开并复制里面的内容，打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key：</p>
-<p>ssh -T <a href="mailto:&#x67;&#x69;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#x75;&#x62;&#x2e;&#99;&#111;&#109;">&#x67;&#x69;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#x75;&#x62;&#x2e;&#99;&#111;&#109;</a><br>git config –global user.name “Khaos”<br>git config –global user.email  “<a href="mailto:&#x4b;&#x68;&#97;&#x6f;&#x73;&#64;&#103;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#x6f;&#109;">&#x4b;&#x68;&#97;&#x6f;&#x73;&#64;&#103;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#x6f;&#109;</a>“</p>
+<p>ssh -T <a href="mailto:&#x67;&#105;&#116;&#64;&#x67;&#x69;&#116;&#104;&#x75;&#98;&#x2e;&#99;&#x6f;&#x6d;">&#x67;&#105;&#116;&#64;&#x67;&#x69;&#116;&#104;&#x75;&#98;&#x2e;&#99;&#x6f;&#x6d;</a><br>git config –global user.name “Khaos”<br>git config –global user.email  “<a href="mailto:&#75;&#104;&#97;&#x6f;&#115;&#64;&#103;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#109;">&#75;&#104;&#97;&#x6f;&#115;&#64;&#103;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#109;</a>“</p>
 <h1 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h1><p>首先在自己的电脑上安装 Node.js，下载地址：<a href="https://nodejs.org/zh-cn/download/%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%AE%89%E8%A3%85">https://nodejs.org/zh-cn/download/，可以安装</a> Stable 版本。</p>
 <p>安装完毕之后，确保环境变量配置好，能正常使用 npm 命令。</p>
 <p>npm –version</p>
